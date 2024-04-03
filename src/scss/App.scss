@@ -2,11 +2,16 @@
   background-color: palegoldenrod;
 }
 
+#h1 {
+  background-color: aquamarine;
+}
+
 .test2 {
-  width: 1000px;
-  height: 1000px;
+  width: 500px;
+  height: 500px;
   background-size: contain;
   background: url('../img/img2.jpeg');
   background-repeat: no-repeat;
+  background-position: center;
   background-color: red;
 }

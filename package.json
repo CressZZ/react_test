@@ -1,9 +1,15 @@
 {
-  "name": "toss_test2",
+  "name": "react_test",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "type": "module",
+  "browserslist": [
+    "defaults",
+    "last 4 major versions",
+    "not ie > 0",
+    "not dead"
+  ],
   "scripts": {
     "serve": "webpack serve --mode=development",
     "build:dev": "webpack --mode=development",
