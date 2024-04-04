@@ -22,7 +22,7 @@ export default (env, argv) => {
     resolve: {
       extensions: ['.js', '.jsx', '.ts', '.tsx'],
       alias: {
-        '@': path.join(__dirname, 'src/'),
+        '@': path.join(__dirname, './src/'),
       },
     },
     devtool:
@@ -85,8 +85,8 @@ export default (env, argv) => {
       historyApiFallback: {
         rewrites: [
           { from: /^\/$/, to: '/index.html' },
-          { from: /^\/subpage/, to: '/index.html' },
-          { from: /./, to: '/404.html' },
+          // { from: /^\/list/, to: '/index.html' },
+          // { from: /./, to: '/404.html' },
         ],
       },
       static: {

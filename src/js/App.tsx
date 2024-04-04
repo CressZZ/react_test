@@ -1,14 +1,20 @@
-import React from 'react';
-import styles from '@/scss/App.scss';
-import img from '@/img/img1.webp';
+// App
+import React, { StrictMode } from 'react';
+import { RouterProvider } from '@tanstack/react-router';
+import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
+import { QueryClientProvider } from '@tanstack/react-query';
+import { router } from './Router.tsx';
+import { queryClient } from './utils/queryClient.ts';
 
 export default function App() {
-  console.log(styles);
   return (
-    <div>
-      <h1 id={`${styles.h1}`}>Welcome to my app!!</h1>
-      <div className={styles.test2}></div>
-      <img src={img} alt="" />
-    </div>
+    <StrictMode>
+      <QueryClientProvider client={queryClient}>
+        <RouterProvider router={router} />
+
+        {/* Devtools */}
+        <ReactQueryDevtools buttonPosition="top-right" />
+      </QueryClientProvider>
+    </StrictMode>
   );
 }
